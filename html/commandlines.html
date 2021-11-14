@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
-    <body></body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h2>Adding react projects to Github Pages</h2>
+		<ol>
+			<li>
+				Run this command in the main directory <br />
+				<code>npm install gh-pages --save-dev</code>
+			</li>
+			<li>
+				Open the package.json file and add the following 'homepage' property:
+				<br />
+				<code>"homepage": "http://{githubusername}.github.io/{reponame}"</code>
+			</li>
+			<li>
+				In the scripts property add: <br />
+				<code
+					>"scripts": { //... "predeploy": "npm run build", "deploy": "gh-pages
+					-d build" }
+				</code>
+			</li>
+		</ol>
+	</body>
 </html>
